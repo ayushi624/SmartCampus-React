@@ -406,3 +406,34 @@ header.topbar {
 .muted {
     color: white;
 }
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: grid;
+    place-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    width: 300px;
+    display: grid;
+    gap: 10px;
+}
+
+.modal input,
+.modal select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
+import CalendarComponent from "./CalendarComponent";
 
 const quickAccessCards = [
     {
@@ -40,7 +41,7 @@ const quickAccessCards = [
     },
 ];
 
-function Dashboard({ userName }) {
+function Dashboard({ userName, role }) {
     const { searchQuery } = useOutletContext();
 
     const [greeting, setGreeting] = useState("");
@@ -68,25 +69,47 @@ function Dashboard({ userName }) {
     return (
         <div className="container">
             <section className="welcome">
-                {userName ? <h2>{greeting}</h2> : null}  {/* Use the state variable */}
-                <p className="muted">
-                    Ready to make the most of your campus experience today?
-                </p>
-                <div className="stats">
-                    <div className="stat">
-                        <h3 data-count="3">3</h3>
-                        <p>Classes Today</p>
-                    </div>
-                    <div className="stat">
-                        <h3 data-count="5">5</h3>
-                        <p>Tasks Pending</p>
-                    </div>
-                    <div className="stat">
-                        <h3 data-count="94">94</h3>
-                        <p>Attendance %</p>
-                    </div>
-                </div>
-            </section>
+  {userName && <h2>{greeting}</h2>}
+
+  <p className="muted">
+    Ready to make the most of your campus experience today?
+  </p>
+
+  <div className="stats">
+    {role === "STUDENT" ? (
+      <>
+        <div className="stat">
+          <h3>3</h3>
+          <p>Classes Today</p>
+        </div>
+        <div className="stat">
+          <h3>5</h3>
+          <p>Tasks Pending</p>
+        </div>
+        <div className="stat">
+          <h3>94%</h3>
+          <p>Attendance</p>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="stat">
+          <h3>2</h3>
+          <p>Lectures to Conduct</p>
+        </div>
+        <div className="stat">
+          <h3>41</h3>
+          <p>Students Absent Today</p>
+        </div>
+        <div className="stat">
+          <h3>7</h3>
+          <p>Pending Evaluations</p>
+        </div>
+      </>
+    )}
+  </div>
+</section>
+
 
             <section className="quick-access" id="qa">
                 {/* Render the filtered cards by mapping over the array */}
@@ -136,192 +159,14 @@ function Dashboard({ userName }) {
                 </ul>
             </section>
 
-            <section
-                className="calendar panel"
-                id="calendarSection"
-                style={{ display: "block", visibility: "visible" }}
-            >
-
-                <div className="cal-header">
-                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                        <h2>Interactive Calendar</h2>
-                        <select id="categoryFilter">
-                            <option value="all">All</option>
-                            <option value="class">Class</option>
-                            <option value="exam">Exam</option>
-                            <option value="club">Club</option>
-                            <option value="personal">Personal</option>
-                        </select>
-                    </div>
-                    <div className="cal-nav">
-                        <button className="btn" id="prevMonth">
-                            ◀
-                        </button>
-                        <div id="monthLabel" className="chip">
-                            August 2025
-                        </div>
-                        <button className="btn" id="nextMonth">
-                            ▶
-                        </button>
-                        <button className="btn" id="todayBtn">
-                            Today
-                        </button>
-                        <button className="btn primary" id="addEventBtn">
-                            + Add Event
-                        </button>
-                    </div>
-                </div>
-                <div className="cal-grid" id="weekdayRow">
-                    <div className="weekday">Sun</div>
-                    <div className="weekday">Mon</div>
-                    <div className="weekday">Tue</div>
-                    <div className="weekday">Wed</div>
-                    <div className="weekday">Thu</div>
-                    <div className="weekday">Fri</div>
-                    <div className="weekday">Sat</div>
-                </div>
-                <div className="cal-grid" id="calGrid">
-                    <div className="day other">
-                        <div className="dnum">27</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">28</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">29</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">30</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">3F1</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">1</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">2</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">3</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">4</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">5</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">6</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">7</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">8</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">9</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">10</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">11</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">12</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">13</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">14</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">15</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">16</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">17</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">18</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">19</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">20</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">21</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">22</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">23</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">24</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">25</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">26</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">27</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">28</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">29</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">30</div>
-                    </div>
-                    <div className="day">
-                        <div className="dnum">31</div>
-                        <div className="event" style={{ background: "rgb(59, 130, 246)" }}>
-                            DS Lecture
-                        </div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">1</div>
-                        <div className="event" style={{ background: "rgb(239, 68, 68)" }}>
-                            Physics Midterm
-                        </div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">2</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">3</div>
-                        <div className="event" style={{ background: "rgb(168, 85, 247)" }}>
-                            Robotics Club
-                        </div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">4</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">5</div>
-                    </div>
-                    <div className="day other">
-                        <div className="dnum">6</div>
-                    </div>
-                </div>
+            <section className="calendar panel" id="calendarSection">
+                <CalendarComponent />
             </section>
 
-            <button className="fab" id="fab">
+            <button className="fab" id="fab" onClick={() => window.dispatchEvent(new Event("openCalendarModal"))}>
                 +
             </button>
+
         </div>
     );
 }
