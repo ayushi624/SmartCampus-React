@@ -42,23 +42,11 @@ function Sidebar({ userType }) {
         <NavLink to={todoLink}>📝 To-Do</NavLink>
         <a href={calendarLink}>🗓️ Calendar</a>
 
-        {/* LOGOUT ITEM */}
-        <button
-          onClick={handleLogout}
-          className="logout-btn"
-          style={{
-            marginTop: "20px",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "16px",
-            padding: "10px 0",
-            color: "#d11a2a",
-            textAlign: "left"
-          }}
-        >
-          🚪 Logout
-        </button>
+        <button onClick={handleLogout} className="logout-btn">
+    🔓 Logout
+  </button>
+
+
       </nav>
     </aside>
   );
