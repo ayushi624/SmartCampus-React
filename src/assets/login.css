@@ -1,0 +1,156 @@
+/* SmartCampus Login Page External CSS */
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: #f4f6fa;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+    min-height: 100vh;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 48px 60px 40px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid rgba(43, 156, 146, 0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 22px;
+  margin: 0;
+  color: #0f172a;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 6px 0 28px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.input-control {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(43, 156, 146, 0.25);
+  background: #f9fafb;
+  font-size: 15px;
+}
+
+.input-control:focus {
+  outline: none;
+  border-color: #2b9c92;
+  box-shadow: 0 0 0 3px rgba(43, 156, 146, 0.2);
+  background: #ffffff;
+}
+
+.error {
+  display: none;
+  color: #e11d48;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 22px;
+  color: #374151;
+  padding: 0 2px;
+}
+
+.options a {
+  color: #2b9c92;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.options a:hover {
+  text-decoration: underline;
+  color: #006d65;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  background: linear-gradient(135deg, #2b9c92, #3bb4a6);
+  color: #fff;
+  margin-top: 6px;
+  transition: 0.2s;
+}
+
+.disabled-btn-login {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: not-allowed;
+  font-weight: 600;
+  font-size: 15px;
+  background: rgb(188, 186, 186);
+  color: #fff;
+  margin-top: 6px;
+  transition: 0.2s;
+}
+
+.btn-login:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+.signup-text {
+  font-size: 13px;
+  margin-top: 20px;
+  color: #374151;
+}
+
+.signup-text a {
+  color: #2b9c92;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+  color: #006d65;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+}
