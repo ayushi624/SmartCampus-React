@@ -64,13 +64,11 @@ aside.sidebar {
     border-radius: 12px;
 }
 
-/* --- LOGOUT SECTION BEAUTIFIED --- */
 .logout-btn {
     position: fixed;
     bottom: 38px;
     left: 18px;
     width: calc(260px - 36px);
-    /* matches sidebar width */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -84,7 +82,7 @@ aside.sidebar {
     cursor: pointer;
     transition: 0.22s ease-in-out;
     backdrop-filter: blur(4px);
-    /* border-top: 1px solid rgba(255,255,255,0.10); */
+    justify-content: center;
 }
 
 .logout-btn:hover {
