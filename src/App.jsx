@@ -66,7 +66,11 @@ function App() {
       <Route path="/signup" element={<SignupPage />} />
 
       <Route path="/" element={<Layout role={userDetails?.role} />}>
-        <Route path="dashboard" element={<Dashboard userName={userDetails?.userName} />} />
+        <Route path="dashboard" element={<Dashboard
+          userName={userDetails?.userName}
+          role={userDetails?.role}
+        />
+        } />
         <Route path="student/myvault" element={<MyVaultPage />} />
         <Route path="student/todo" element={<StudentToDoPage />} />
         <Route path="student/attendance" element={<StudentAttendancePage />} />
