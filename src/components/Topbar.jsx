@@ -2,7 +2,7 @@ import React from 'react';
 
 // The Topbar needs to get the search query and a change handler
 // from its parent (the Layout) so it can filter the page content.
-function Topbar({ searchQuery, onSearchChange }) {
+function Topbar({ searchQuery, onSearchChange , userName }) {
   return (
     <header className="topbar">
       <div className="topbar-inner">
@@ -15,7 +15,10 @@ function Topbar({ searchQuery, onSearchChange }) {
             onChange={onSearchChange} // Passes changes up to the parent
           />
         </div>
-        <div className="user-profile">AS</div>
+        <div className="user-profile">
+  {userName ? userName.split(" ")[0] : "User"}
+</div>
+
       </div>
     </header>
   );

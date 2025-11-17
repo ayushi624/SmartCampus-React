@@ -1,0 +1,101 @@
+/* teacher-attendance.css
+   Matches Student Attendance style and .content layout */
+
+/* Base reset for page content area */
+.content {
+  padding: 25px;
+  overflow-y: auto;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Page title */
+.content h1 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: #1e293b;
+}
+
+/* Welcome / summary box (same as student) */
+.welcome {
+  background: linear-gradient(135deg, #2b9c92, #3bb4a6);
+  padding: 24px;
+  border-radius: 16px;
+  color: #fff;
+  display: grid;
+  gap: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* small subtitle */
+.subtitle {
+  font-size: 14px;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Stats grid inside welcome */
+.stats {
+  width: 100%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.stat {
+  background: rgba(255,255,255,0.16);
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+/* Section title used below */
+.section-title {
+  font-size: 20px;
+  margin: 22px 0 12px;
+  color: #0f172a;
+}
+
+/* container for cards */
+.container {
+  display: grid;
+  gap: 18px;
+}
+
+/* standard card panel */
+.panel {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(43,156,146,0.06);
+}
+
+/* buttons like in student CSS */
+.btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(43,156,146,0.15);
+  background: #ffffff;
+  cursor: pointer;
+}
+.btn.primary {
+  background: linear-gradient(135deg, #2b9c92, #3bb4a6);
+  color: #fff;
+  border: 0;
+}

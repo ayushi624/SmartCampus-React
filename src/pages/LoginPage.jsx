@@ -3,7 +3,6 @@ import '../assets/login.css';
 import { useState } from 'react';
 
 
-
 export default function Login() {
   const [email, setEamil] = useState('');
   const [password, setPassword] = useState('');
@@ -71,20 +70,10 @@ console.log(error, 'error state');
           </div>
           <span className='error-text'>{error?.message}</span>
 
-          <div className="options">
-            <label>
-              <input type="checkbox" /> Remember me
-            </label>
-            <a href="#">Forgot password?</a>
-          </div>
 
           <button disabled={!password || !email} onClick={handleLogin} type='button' className={!password || !email ? "disabled-btn-login" : "btn-login"}>
             Log In
           </button>
-
-          <div className="signup-text">
-            Don't have an account? <a href="signup.html">Sign up</a>
-          </div>
         </form>
       </div>
     </div>
