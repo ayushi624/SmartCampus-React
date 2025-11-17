@@ -11,9 +11,10 @@ import MyVault from './pages/MyVault';
 import StudentComplaintPage from './pages/StudentComplaintPage';
 import TeacherComplaintPage from './pages/TeacherComplaintPage';
 import ToDoListPage from './pages/ToDoListPage';
+import LostFoundPage from './pages/LostFoundPage';
+import TeacherMyVault from './pages/TeacherMyVault';
 
 
-const StudentLostFoundPage = () => <div>Student Lost & Found Page</div>;
 
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
@@ -76,14 +77,16 @@ function App() {
         <Route path="student/myvault" element={<MyVault />} />
         <Route path="student/attendance" element={<StudentAttendance />} />
         <Route path="student/complaints" element={<StudentComplaintPage />} />
-        <Route path="student/lost-found" element={<StudentLostFoundPage />} />
+        <Route path="student/lost-found" element={<LostFoundPage />} />
       </Route>
 
       <Route path="/" element={<Layout role={userDetails?.role} />}>
         <Route path="teacher" element={<Dashboard userName={userDetails?.userName} />} />
         <Route path="teacher/attendance" element={<TeacherAttendance />} />
         <Route path="teacher/complaints" element={<TeacherComplaintPage />} />
-        <Route path="teacher/lost-found" element={<StudentLostFoundPage />} />
+        <Route path="teacher/myvault" element={<TeacherMyVault />} />
+        <Route path="teacher/todo" element={<ToDoListPage />} />
+        <Route path="teacher/lost-found" element={<LostFoundPage />} />
       </Route>
     </Routes>
   );

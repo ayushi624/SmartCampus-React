@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../assets/myvault.css";
+import "../assets/myvault.css";
 
 export default function TeacherMyVault() {
   const [files, setFiles] = useState([]);
