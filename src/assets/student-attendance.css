@@ -14,7 +14,7 @@
 /* Welcome Section */
 .welcome {
     background: linear-gradient(135deg, #2b9c92, #3bb4a6);
-    padding: 24px;
+    padding: 14px 24px 4px 24px;
     border-radius: 16px;
     color: #fff;
     display: grid;
@@ -30,7 +30,7 @@
 
 .stat {
     background: rgba(255, 255, 255, 0.16);
-    padding: 16px;
+    padding: 6px;
     border-radius: 14px;
     text-align: center;
 }

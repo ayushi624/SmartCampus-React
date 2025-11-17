@@ -30,7 +30,7 @@ export default function StudentAttendance() {
       {/* ===== SUMMARY ===== */}
       <section className="welcome">
         <h2>Your Attendance Overview</h2>
-        <p className="muted">Updated automatically based on your class records.</p>
+        <p className="muted">Stay on Track: Your Complete Attendance Overview</p>
 
         <div className="stats">
           <div className="stat">
@@ -54,20 +54,6 @@ export default function StudentAttendance() {
           </div>
         </div>
 
-        {/* Warnings Based on Attendance */}
-        {overallPercent < 75 ? (
-          <p style={{ color: "red", marginTop: "5px" }}>
-            ⚠️ You are below 75%. Attend your next classes!
-          </p>
-        ) : bunksLeft === 0 ? (
-          <p style={{ color: "#f97316", marginTop: "5px" }}>
-            ⚠️ No bunks left. One more absence will drop you below 75%.
-          </p>
-        ) : (
-          <p style={{ color: "#10b981", marginTop: "5px" }}>
-            ✓ You can safely bunk <b>{bunksLeft}</b> more classes.
-          </p>
-        )}
       </section>
 
       {/* ===== SUBJECT BREAKDOWN ===== */}
