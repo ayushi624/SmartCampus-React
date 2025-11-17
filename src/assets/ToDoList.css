@@ -19,7 +19,7 @@
     .container {
       width: 100%;
       /* Use padding instead of horizontal margins so children don't create overflow */
-      margin: 2.5rem auto;
+      margin: 1rem auto;
       padding: 0 1.5rem;
       display: flex;
       flex-direction: column;
