@@ -1,0 +1,237 @@
+* {
+      box-sizing: border-box;
+      /* Prevent flex children causing overflow */
+      min-width: 0;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;            /* important */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* MAIN CONTENT AREA - full width inside whatever outer layout you use */
+    .container {
+      width: 100%;
+      /* Use padding instead of horizontal margins so children don't create overflow */
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Title section */
+    .title-section h2 {
+      font-size: 2rem;
+      margin-bottom: .3rem;
+    }
+    .title-section p {
+      color: #475569;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    /* Panels/cards */
+    .panel {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Add Task Form */
+    .add-task-form {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      flex-grow: 1;
+      min-width: 180px;
+      /* Ensure flex children do not force parent overflow */
+      min-width: 0;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: .8rem;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    /* Button */
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary {
+      background: #3b82f6;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(59,130,246,0.18);
+    }
+    .btn:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
+      transition: transform .12s ease, opacity .12s ease;
+    }
+
+    /* Filter buttons */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;          /* allow wrap on narrow screens */
+    }
+    .filter-bar {
+      display: inline-flex;
+      align-items: center;
+      background: #e2e8f0;
+      padding: .4rem;
+      border-radius: 99px;
+    }
+    .filter-btn {
+      padding: .5rem 1.2rem;
+      border-radius: 99px;
+      border: none;
+      background: transparent;
+      color: #475569;
+      cursor: pointer;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .filter-btn.active {
+      background: #ffffff;
+      color: #3b82f6;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Task list */
+    .task-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 0.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .task-item.completed {
+      opacity: 0.5;
+    }
+    .task-item.completed .task-title {
+      text-decoration: line-through;
+    }
+
+    .task-check input {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .task-details { 
+      flex-grow: 1;
+      min-width: 0; /* prevents overflowing text */
+    }
+
+    .task-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      overflow-wrap: anywhere; /* allow breaking long words */
+    }
+
+    .task-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: #475569;
+      flex-shrink: 0;
+    }
+
+    /* Tags */
+    .tag {
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+    .tag-academic { background: #8b5cf6; }
+    .tag-personal { background: #ec4899; }
+    .tag-club { background: #14b8a6; }
+
+    /* Task actions */
+    .task-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .action-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+    }
+    .action-btn:hover {
+      background-color: #f1f5f9;
+    }
+
+    /* Empty state */
+    .empty-message {
+      padding: 1.25rem;
+      color: #475569;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    /* Responsive stacks */
+    @media (max-width: 640px) {
+      .add-task-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      /* Ensure task meta and actions stack if needed */
+      .task-meta {
+        display: none; /* keep layout tight on very small screens; adjust as needed */
+      }
+    }
