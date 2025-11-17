@@ -6,10 +6,10 @@ import { createClient } from '@supabase/supabase-js';
 import Layout from './layouts/Layout';
 import Dashboard from './components/dashboard';
 import TeacherAttendance from './pages/TeacherAttendance';
+import StudentAttendance from './pages/StudentAttendance';
+import MyVault from './pages/MyVault';
 
-const MyVaultPage = () => <div>My Vault Page</div>;
 const StudentToDoPage = () => <div>Student To-Do Page</div>;
-const StudentAttendancePage = () => <div>Student Attendance Page</div>;
 const StudentComplaintsPage = () => <div>Student Complaints Page</div>;
 const StudentLostFoundPage = () => <div>Student Lost & Found Page</div>;
 
@@ -71,9 +71,9 @@ function App() {
           role={userDetails?.role}
         />
         } />
-        <Route path="student/myvault" element={<MyVaultPage />} />
+        <Route path="student/myvault" element={<MyVault />} />
         <Route path="student/todo" element={<StudentToDoPage />} />
-        <Route path="student/attendance" element={<StudentAttendancePage />} />
+        <Route path="student/attendance" element={<StudentAttendance />} />
         <Route path="student/complaints" element={<StudentComplaintsPage />} />
         <Route path="student/lost-found" element={<StudentLostFoundPage />} />
       </Route>
