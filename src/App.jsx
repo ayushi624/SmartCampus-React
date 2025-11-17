@@ -8,11 +8,10 @@ import Dashboard from './components/dashboard';
 import TeacherAttendance from './pages/TeacherAttendance';
 import StudentAttendance from './pages/StudentAttendance';
 import MyVault from './pages/MyVault';
+import StudentComplaintPage from './pages/StudentComplaintPage';
 
 const StudentToDoPage = () => <div>Student To-Do Page</div>;
-const StudentComplaintsPage = () => <div>Student Complaints Page</div>;
 const StudentLostFoundPage = () => <div>Student Lost & Found Page</div>;
-
 const TeacherComplaintsPage = () => <div>Teacher Complaints Page</div>;
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
@@ -74,7 +73,7 @@ function App() {
         <Route path="student/myvault" element={<MyVault />} />
         <Route path="student/todo" element={<StudentToDoPage />} />
         <Route path="student/attendance" element={<StudentAttendance />} />
-        <Route path="student/complaints" element={<StudentComplaintsPage />} />
+        <Route path="student/complaints" element={<StudentComplaintPage />} />
         <Route path="student/lost-found" element={<StudentLostFoundPage />} />
       </Route>
 
