@@ -1,0 +1,203 @@
+/* --- MyVault Page (React Layout Safe Version) --- */
+
+.content {
+  padding: 25px;
+  width: 100%;
+}
+
+/* Page Title */
+.content h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ============================
+   VAULT SUMMARY
+============================ */
+.stats {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 35px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stats h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.stat-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  color: #e0ecff;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   UPLOAD BOX
+============================ */
+.upload-box {
+  background: #f8fafc;
+  border: 2px dashed #94a3b8;
+  border-radius: 14px;
+  padding: 45px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upload-box p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+.upload-box span {
+  display: block;
+  margin: 12px 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-btn:hover {
+  background: #0ea5e9;
+}
+
+/* ============================
+   DOCUMENT GRID
+============================ */
+.documents h2 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 22px;
+}
+
+.doc-card {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: rgba(100, 116, 139, 0.16) 0px 4px 8px;
+  transition: transform 0.15s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-3px);
+}
+
+.doc-icon {
+  font-size: 2.2rem;
+}
+
+.doc-name {
+  margin: 12px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  word-wrap: break-word;
+}
+
+.doc-actions button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: #e2e8f0;
+}
+
+.doc-actions button:hover {
+  background: #cbd5e1;
+}
+
+.content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Vault Page Layout */
+.vault-summary-section {
+  background: linear-gradient(135deg, #2b9c92, #3bb4a6);
+  color: white;
+  padding: 26px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.vault-summary-section h2 {
+  margin-bottom: 10px;
+}
+
+.vault-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* Row of stat cards */
+.vault-stats-row {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Each card */
+.vault-stat-card {
+  flex: 1;
+  min-width: 180px;
+  background: rgba(255,255,255,0.18);
+  padding: 18px;
+  text-align: center;
+  border-radius: 14px;
+}
+
+.vault-stat-card h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.vault-stat-card p {
+  margin: 4px 0 0;
+  opacity: 0.95;
+}

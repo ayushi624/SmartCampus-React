@@ -6,15 +6,13 @@ import { createClient } from '@supabase/supabase-js';
 import Layout from './layouts/Layout';
 import Dashboard from './components/dashboard';
 import TeacherAttendance from './pages/TeacherAttendance';
+import StudentAttendance from './pages/StudentAttendance';
+import MyVault from './pages/MyVault';
 import StudentComplaintPage from './pages/StudentComplaintPage';
 import ToDoListPage from './pages/ToDoListPage';
 
-const MyVaultPage = () => <div>My Vault Page</div>;
-
-const StudentAttendancePage = () => <div>Student Attendance Page</div>;
 
 const StudentLostFoundPage = () => <div>Student Lost & Found Page</div>;
-
 const TeacherComplaintsPage = () => <div>Teacher Complaints Page</div>;
 
 const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY);
@@ -73,9 +71,9 @@ function App() {
           role={userDetails?.role}
         />
         } />
-        <Route path="student/myvault" element={<MyVaultPage />} />
         <Route path="student/todo" element={<ToDoListPage />} />
-        <Route path="student/attendance" element={<StudentAttendancePage />} />
+        <Route path="student/myvault" element={<MyVault />} />
+        <Route path="student/attendance" element={<StudentAttendance />} />
         <Route path="student/complaints" element={<StudentComplaintPage />} />
         <Route path="student/lost-found" element={<StudentLostFoundPage />} />
       </Route>
