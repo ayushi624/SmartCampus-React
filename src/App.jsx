@@ -7,9 +7,10 @@ import Layout from './layouts/Layout';
 import Dashboard from './components/dashboard';
 import TeacherAttendance from './pages/TeacherAttendance';
 import StudentComplaintPage from './pages/StudentComplaintPage';
+import ToDoListPage from './pages/ToDoListPage';
 
 const MyVaultPage = () => <div>My Vault Page</div>;
-const StudentToDoPage = () => <div>Student To-Do Page</div>;
+
 const StudentAttendancePage = () => <div>Student Attendance Page</div>;
 
 const StudentLostFoundPage = () => <div>Student Lost & Found Page</div>;
@@ -73,7 +74,7 @@ function App() {
         />
         } />
         <Route path="student/myvault" element={<MyVaultPage />} />
-        <Route path="student/todo" element={<StudentToDoPage />} />
+        <Route path="student/todo" element={<ToDoListPage />} />
         <Route path="student/attendance" element={<StudentAttendancePage />} />
         <Route path="student/complaints" element={<StudentComplaintPage />} />
         <Route path="student/lost-found" element={<StudentLostFoundPage />} />
