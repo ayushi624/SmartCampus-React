@@ -37,7 +37,7 @@ const quickAccessCards = [
         id: "calendar",
         title: "🗓️ Calendar",
         desc: "Never miss your academic deadlines",
-        link: "#calendarSection", // This is an anchor link
+        link: "#calendarSection", 
     },
 ];
 
@@ -46,7 +46,7 @@ function Dashboard({ userName, role }) {
 
     const [greeting, setGreeting] = useState("");
 
-    // Set greeting on load
+    
     useEffect(() => {
         const hour = new Date().getHours();
         if (hour < 12) {
@@ -56,12 +56,11 @@ function Dashboard({ userName, role }) {
         } else {
             setGreeting(`Good evening, ${userName}`);
         }
-    }, [userName]);// The empty [] means it runs once on load
-
-    // Filter the cards based on the searchQuery from the layout
+    }, [userName]);
+    
     const filteredCards = quickAccessCards.filter(
         (card) =>
-            !searchQuery || // If search is empty, show all cards
+            !searchQuery || 
             card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             card.desc.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -112,12 +111,12 @@ function Dashboard({ userName, role }) {
 
 
             <section className="quick-access" id="qa">
-                {/* Render the filtered cards by mapping over the array */}
+                
                 {filteredCards.map((card) => (
                     <div className="card" data-id={card.id} key={card.id}>
                         <h3>{card.title}</h3>
                         <p>{card.desc}</p>
-                        {/* Use <Link> for React Router links, <a> for anchors */}
+                        
                         {card.link.startsWith("#") ? (
                             <a href={card.link}>Open →</a>
                         ) : (

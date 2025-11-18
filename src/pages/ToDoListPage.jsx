@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../assets/ToDoList.css";
 
 function ToDoListPage() {
-  // === STATE ===
   const [tasks, setTasks] = useState(() => {
     return JSON.parse(localStorage.getItem("tasks")) || [];
   });
@@ -12,12 +11,10 @@ function ToDoListPage() {
   const [dueDate, setDueDate] = useState("");
   const [currentFilter, setCurrentFilter] = useState("all");
 
-  // Save tasks to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  // === HANDLERS ===
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title.trim()) return;
@@ -62,7 +59,6 @@ function ToDoListPage() {
     );
   };
 
-  // === FILTER LOGIC ===
   const filteredTasks = tasks.filter((task) => {
     if (currentFilter === "pending") return !task.completed;
     if (currentFilter === "completed") return task.completed;
@@ -77,7 +73,6 @@ function ToDoListPage() {
         <p>Organize your tasks, stay on track, and boost productivity.</p>
       </div>
 
-      {/* ADD TASK FORM */}
       <div className="panel">
         <form onSubmit={handleSubmit} className="add-task-form">
           <div className="form-group" style={{ flexGrow: 2 }}>
@@ -117,7 +112,6 @@ function ToDoListPage() {
         </form>
       </div>
 
-      {/* FILTER BUTTONS */}
       <div className="controls">
         <div className="filter-bar">
           <button
@@ -145,7 +139,6 @@ function ToDoListPage() {
         </div>
       </div>
 
-      {/* TASK LIST */}
       <div className="panel">
         <ul className="task-list">
           {filteredTasks.length === 0 ? (

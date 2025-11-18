@@ -6,17 +6,17 @@ const STORAGE_KEY = "lostFoundItems";
 export default function LostFoundPage() {
   const [items, setItems] = useState([]);
   const [filter, setFilter] = useState("all");
-  const [openModal, setOpenModal] = useState(null); // "lost" | "found" | null
+  const [openModal, setOpenModal] = useState(null); 
   const emptyForm = { name: "", desc: "", loc: "", contact: "" };
   const [form, setForm] = useState(emptyForm);
 
-  // load items
+  
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
     setItems(stored);
   }, []);
 
-  // persist items
+  
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items]);
@@ -138,7 +138,7 @@ export default function LostFoundPage() {
         </section>
       </main>
 
-      {/* Modal */}
+      
       {openModal && (
         <div className="lf-modal" onClick={closeModal}>
           <div className="lf-modal-content" onClick={e => e.stopPropagation()}>

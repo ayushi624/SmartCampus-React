@@ -19,7 +19,7 @@ function CalendarComponent() {
 });
 
 
-    // Modal state
+    
     const [showModal, setShowModal] = useState(false);
     const [newEvent, setNewEvent] = useState({
         title: "",
@@ -40,7 +40,7 @@ function CalendarComponent() {
 
     const monthName = new Date(currentYear, currentMonth).toLocaleString("default", { month: "long" });
 
-    // --- Calendar Generation Logic ---
+    
     const firstDay = new Date(currentYear, currentMonth, 1);
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
 
@@ -114,7 +114,7 @@ function CalendarComponent() {
 
     return (
         <>
-            {/* Header */}
+            
             <div className="cal-header">
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     <h2>Interactive Calendar</h2>
@@ -129,7 +129,6 @@ function CalendarComponent() {
                     </select>
                 </div>
 
-                {/* Navigation */}
                 <div className="cal-nav">
                     <button className="btn" onClick={() => changeMonth(-1)}>◀</button>
                     <div className="chip">{monthName} {currentYear}</div>
@@ -137,21 +136,18 @@ function CalendarComponent() {
 
                     <button className="btn" onClick={goToToday}>Today</button>
 
-                    {/* Add event */}
                     <button className="btn primary" onClick={() => setShowModal(true)}>
                         + Add Event
                     </button>
                 </div>
             </div>
 
-            {/* Weekdays */}
             <div className="cal-grid">
                 {WEEKDAYS.map((d) => (
                     <div className="weekday" key={d}>{d}</div>
                 ))}
             </div>
 
-            {/* Calendar */}
             <div className="cal-grid">
                 {allDays.map((d, index) => (
                     <div className={`day ${d.other ? "other" : ""}`} key={index}>
@@ -166,7 +162,6 @@ function CalendarComponent() {
                 ))}
             </div>
 
-            {/* Modal */}
             {showModal && (
                 <div className="modal-overlay">
                     <div className="modal">
