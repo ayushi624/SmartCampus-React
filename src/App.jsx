@@ -11,7 +11,6 @@ import StudentComplaintPage from './pages/StudentComplaintPage';
 import TeacherComplaintPage from './pages/TeacherComplaintPage';
 import ToDoListPage from './pages/ToDoListPage';
 import LostFoundPage from './pages/LostFoundPage';
-import TeacherMyVault from './pages/TeacherMyVault';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
