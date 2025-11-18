@@ -116,7 +116,7 @@ export default function TeacherAttendance() {
 
   return (
     <div className="content">
-      <h1>FEE Attendance Dashboard</h1>
+      <h1>Attendance Dashboard</h1>
 
       {/* Date Selector */}
       <div className="panel" style={{ padding: "20px", marginBottom: "20px" }}>

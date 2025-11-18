@@ -163,7 +163,7 @@ function Dashboard({ userName, role }) {
                 <CalendarComponent />
             </section>
 
-            <button className="fab" id="fab" onClick={() => window.dispatchEvent(new Event("openCalendarModal"))}>
+            <button className="fabbbb" id="fabbbb" onClick={() => window.dispatchEvent(new Event("openCalendarModal"))}>
                 +
             </button>
 
