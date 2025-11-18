@@ -1,13 +1,12 @@
 * {
       box-sizing: border-box;
-      /* Prevent flex children causing overflow */
       min-width: 0;
     }
     html, body {
       margin: 0;
       padding: 0;
       max-width: 100%;
-      overflow-x: hidden;            /* important */
+      overflow-x: hidden;            
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #f8fafc;
       color: #0f172a;
@@ -15,10 +14,9 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* MAIN CONTENT AREA - full width inside whatever outer layout you use */
+
     .container {
       width: 100%;
-      /* Use padding instead of horizontal margins so children don't create overflow */
       margin: 1rem auto;
       padding: 0 1.5rem;
       display: flex;
@@ -26,7 +24,7 @@
       gap: 24px;
     }
 
-    /* Title section */
+    
     .title-section h2 {
       font-size: 2rem;
       margin-bottom: .3rem;
@@ -37,7 +35,7 @@
       margin-top: 0;
     }
 
-    /* Panels/cards */
+   
     .panel {
       width: 100%;
       background: #ffffff;
@@ -48,7 +46,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Add Task Form */
+   
     .add-task-form {
       display: flex;
       gap: 1rem;
@@ -59,7 +57,6 @@
     .form-group {
       flex-grow: 1;
       min-width: 180px;
-      /* Ensure flex children do not force parent overflow */
       min-width: 0;
     }
     .form-group label {
@@ -78,7 +75,7 @@
       box-sizing: border-box;
     }
 
-    /* Button */
+
     .btn {
       padding: 0.8rem 1.5rem;
       border: none;
@@ -101,12 +98,11 @@
       transition: transform .12s ease, opacity .12s ease;
     }
 
-    /* Filter buttons */
     .controls {
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-wrap: wrap;          /* allow wrap on narrow screens */
+      flex-wrap: wrap;         
     }
     .filter-bar {
       display: inline-flex;
@@ -131,7 +127,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
-    /* Task list */
     .task-list {
       list-style: none;
       padding: 0;
@@ -161,13 +156,13 @@
 
     .task-details { 
       flex-grow: 1;
-      min-width: 0; /* prevents overflowing text */
+      min-width: 0; 
     }
 
     .task-title {
       font-size: 1.1rem;
       font-weight: 500;
-      overflow-wrap: anywhere; /* allow breaking long words */
+      overflow-wrap: anywhere; 
     }
 
     .task-meta {
@@ -179,7 +174,7 @@
       flex-shrink: 0;
     }
 
-    /* Tags */
+    
     .tag {
       padding: 0.25rem 0.75rem;
       border-radius: 99px;
@@ -193,7 +188,6 @@
     .tag-personal { background: #ec4899; }
     .tag-club { background: #14b8a6; }
 
-    /* Task actions */
     .task-actions {
       display: flex;
       gap: 0.5rem;
@@ -215,7 +209,6 @@
       background-color: #f1f5f9;
     }
 
-    /* Empty state */
     .empty-message {
       padding: 1.25rem;
       color: #475569;
@@ -224,14 +217,13 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     }
 
-    /* Responsive stacks */
     @media (max-width: 640px) {
       .add-task-form {
         flex-direction: column;
         align-items: stretch;
       }
-      /* Ensure task meta and actions stack if needed */
+
       .task-meta {
-        display: none; /* keep layout tight on very small screens; adjust as needed */
+        display: none; 
       }
     }
