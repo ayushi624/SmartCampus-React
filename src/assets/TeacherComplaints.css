@@ -1,7 +1,3 @@
-/* ============================
-   CLEAN COMPLAINTS PAGE CSS
-   (No dark mode, no sidebar, no topbar)
-============================ */
 
 * {
   box-sizing: border-box;
@@ -14,7 +10,7 @@ body {
   color: #1f2937;
 }
 
-/* MAIN CONTAINER: full width inside your layout */
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -24,7 +20,7 @@ body {
   gap: 24px;
 }
 
-/* Header */
+
 .TeacherComplaints header h1 {
   font-size: 28px;
   font-weight: 800;
@@ -45,7 +41,7 @@ header p {
   text-align: center;
 }
 
-/* Card */
+
 .card {
   background: #ffffff;
   padding: 24px;
@@ -76,7 +72,7 @@ header p {
   background: linear-gradient(135deg, #2b9c92, #3bb4a6);
 }
 
-/* Reports Table */
+
 .reports-table {
   width: 100%;
   border-collapse: collapse;
@@ -107,7 +103,7 @@ header p {
   transition: background 0.2s ease;
 }
 
-/* Status Dropdown */
+
 select.status-select {
   padding: 6px 10px;
   border-radius: 6px;

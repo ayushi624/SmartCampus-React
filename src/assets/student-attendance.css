@@ -1,9 +1,8 @@
-/* --- PAGE CONTENT ONLY — safe for React Layout --- */
 * {
     box-sizing: border-box;
 }
 
-/* MAIN PAGE CONTAINER (inside <Outlet>) */
+
 .container {
     padding: 20px;
     width: 100%;
@@ -11,7 +10,6 @@
     gap: 18px;
 }
 
-/* Welcome Section */
 .welcome {
     background: linear-gradient(135deg, #2b9c92, #3bb4a6);
     padding: 14px 24px 4px 24px;
@@ -21,7 +19,6 @@
     gap: 14px;
 }
 
-/* Stats */
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -35,7 +32,6 @@
     text-align: center;
 }
 
-/* Subject Breakdown */
 .subject-breakdown .Subjects {
     margin-top: 14px;
     display: grid;
@@ -64,7 +60,6 @@
     color: #16a34a;
 }
 
-/* --------- Comparison Bar Chart --------- */
 
 .bar-chart {
   display: flex;
@@ -94,5 +89,5 @@
   height: 12px;
   background: linear-gradient(to right, #34d399, #10b981);
   border-radius: 50px;
-  width: 0; /* starts from zero for animation */
+  width: 0; 
 }
