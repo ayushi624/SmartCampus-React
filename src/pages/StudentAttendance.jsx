@@ -3,16 +3,13 @@ import "../assets/student-attendance.css";
 
 export default function StudentAttendance() {
   
-  // ===== SAMPLE STATIC VALUES =====
   const attended = 41;
   const total = 47;
   const overallPercent = Math.round((attended / total) * 100);
 
-  // ===== BUNK CALCULATION (REAL FORMULA) =====
   const maxTotalAllowed = attended / 0.75;
   const bunksLeft = Math.max(0, Math.floor(maxTotalAllowed - total));
 
-  // ===== Progress Bar Animation =====
   useEffect(() => {
     document.querySelectorAll(".bar-fill, .progress-fill").forEach((bar) => {
       const width = bar.style.width;
@@ -27,7 +24,6 @@ export default function StudentAttendance() {
   return (
     <div className="content">
 
-      {/* ===== SUMMARY ===== */}
       <section className="welcome">
         <h2>Your Attendance Overview</h2>
         <p className="muted">Stay on Track: Your Complete Attendance Overview</p>
@@ -56,13 +52,11 @@ export default function StudentAttendance() {
 
       </section>
 
-      {/* ===== SUBJECT BREAKDOWN ===== */}
       <section className="subject-breakdown">
         <h2>Subject-wise Breakdown</h2>
 
         <div className="Subjects">
 
-          {/* DSOOPS */}
           <div className="subject-card">
             <div className="card-header">
               <h4>DSOOPS</h4>
@@ -74,7 +68,6 @@ export default function StudentAttendance() {
             </div>
           </div>
 
-          {/* Discrete Mathematics */}
           <div className="subject-card">
             <div className="card-header">
               <h4>Discrete Mathematics</h4>
@@ -86,7 +79,6 @@ export default function StudentAttendance() {
             </div>
           </div>
 
-          {/* DECA */}
           <div className="subject-card">
             <div className="card-header">
               <h4>DECA</h4>
@@ -98,7 +90,6 @@ export default function StudentAttendance() {
             </div>
           </div>
 
-          {/* OS */}
           <div className="subject-card">
             <div className="card-header">
               <h4>Operating Systems</h4>
@@ -113,7 +104,6 @@ export default function StudentAttendance() {
         </div>
       </section>
 
-      {/* ===== COMPARISON BAR CHART ===== */}
       <section className="panel">
         <h2>Attendance Comparison</h2>
 

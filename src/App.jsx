@@ -84,7 +84,7 @@ function App() {
         <Route path="teacher" element={<Dashboard userName={userDetails?.userName} />} />
         <Route path="teacher/attendance" element={<TeacherAttendance />} />
         <Route path="teacher/complaints" element={<TeacherComplaintPage />} />
-        <Route path="teacher/myvault" element={<TeacherMyVault />} />
+        <Route path="teacher/myvault" element={<MyVault />} />
         <Route path="teacher/todo" element={<ToDoListPage />} />
         <Route path="teacher/lost-found" element={<LostFoundPage />} />
       </Route>

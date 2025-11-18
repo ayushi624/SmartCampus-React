@@ -2,7 +2,6 @@ import React, { useState, useMemo } from "react";
 import { useOutletContext } from "react-router-dom";
 import "../assets/teacher-attendance.css";
 
-/* COMPLETE FEE STUDENT LIST */
 const STUDENTS = [
   { roll: "2410990243", name: "Aastha" },
   { roll: "2410990244", name: "Aayushman Semwal" },
@@ -85,11 +84,10 @@ const STUDENTS = [
 ];
 
 export default function TeacherAttendance() {
-  const { searchQuery } = useOutletContext();   // ⬅ Topbar search working here
+  const { searchQuery } = useOutletContext();   
   const [selectedDate, setSelectedDate] = useState("");
   const [attendance, setAttendance] = useState({});
 
-  // Filter using Topbar Search
   const filteredStudents = useMemo(() => {
     const q = searchQuery?.toLowerCase() || "";
     if (!q.trim()) return STUDENTS;
@@ -118,7 +116,6 @@ export default function TeacherAttendance() {
     <div className="content">
       <h1>Attendance Dashboard</h1>
 
-      {/* Date Selector */}
       <div className="panel" style={{ padding: "20px", marginBottom: "20px" }}>
         <label style={{ fontWeight: 600 }}>Select Date</label>
         <input
@@ -128,7 +125,6 @@ export default function TeacherAttendance() {
         />
       </div>
 
-      {/* ATTENDANCE LIST */}
       <div className="panel" style={{ padding: "20px" }}>
         <h3 style={{ marginBottom: "15px" }}>
           Students ({filteredStudents.length}/{STUDENTS.length})

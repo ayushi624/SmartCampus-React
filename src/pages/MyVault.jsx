@@ -4,18 +4,15 @@ import "../assets/myvault.css";
 export default function MyVault() {
   const [files, setFiles] = useState([]);
 
-  // Load saved files from localStorage
   useEffect(() => {
     const stored = localStorage.getItem("myvault_student_files");
     if (stored) setFiles(JSON.parse(stored));
   }, []);
 
-  // Save to localStorage whenever files change
   useEffect(() => {
     localStorage.setItem("myvault_student_files", JSON.stringify(files));
   }, [files]);
 
-  // Upload handler
   const handleUpload = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -28,7 +25,7 @@ export default function MyVault() {
         name: file.name,
         size: file.size,
         type: file.type,
-        url: ev.target.result, // base64
+        url: ev.target.result, 
       };
 
       setFiles((prev) => [...prev, newFile]);
@@ -37,12 +34,10 @@ export default function MyVault() {
     reader.readAsDataURL(file);
   };
 
-  // Delete handler
   const handleDelete = (id) => {
     setFiles((prev) => prev.filter((f) => f.id !== id));
   };
 
-  // Calculate storage used
   const totalSizeMB = (
     files.reduce((acc, f) => acc + f.size, 0) /
     (1024 * 1024)
@@ -53,7 +48,6 @@ export default function MyVault() {
 
       <h1>MyVault</h1>
 
-      {/* ---------- Vault Summary Section (UNCHANGED) ---------- */}
       <section className="vault-summary-section">
         <h2>Vault Summary</h2>
         <p className="vault-subtitle">
@@ -83,7 +77,6 @@ export default function MyVault() {
         </div>
       </section>
 
-      {/* ---------- Upload Box (UNCHANGED UI) ---------- */}
       <section className="upload-box">
         <p>Drag & Drop your files here</p>
         <span>or</span>
@@ -103,7 +96,6 @@ export default function MyVault() {
         />
       </section>
 
-      {/* ---------- Documents (UNCHANGED UI) ---------- */}
       <section className="documents">
         <h2>Your Documents</h2>
 
