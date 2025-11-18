@@ -1,4 +1,3 @@
-/* -------- Base -------- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -6,7 +5,7 @@ body {
   color: #0f172a;
 }
 
-/* -------- Header (component) -------- */
+
 .lf-header-bar {
   background: rgba(244, 246, 250, 0.85);
   border-bottom: 1px solid rgba(43, 156, 146, 0.1);
@@ -28,19 +27,17 @@ body {
 
 .lf-sub {
   margin: 4px 0 0;
-  color: black; /* per your request */
+  color: black; 
   font-size: 0.98rem;
   text-align: left;
 }
 
-/* -------- Main container -------- */
 .lf-container {
   max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
 
-/* controls wrapper (buttons + filters) */
 .lf-controls {
   display: flex;
   flex-direction: column;
@@ -57,7 +54,6 @@ body {
   }
 }
 
-/* -------- Buttons -------- */
 .lf-btn-group {
   display: flex;
   gap: 1rem;
@@ -94,7 +90,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* -------- Filters -------- */
 .lf-filter-bar {
   display: inline-flex;
   align-items: center;
@@ -125,7 +120,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-/* -------- Card grid & cards -------- */
 .lf-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -234,7 +228,6 @@ body {
   line-height: 1;
 }
 
-/* -------- Empty State -------- */
 .lf-empty {
   text-align: center;
   color: #94a3b8;
@@ -242,7 +235,6 @@ body {
   padding: 2rem 0;
 }
 
-/* -------- Modal (React-driven) -------- */
 .lf-modal {
   position: fixed;
   inset: 0;
@@ -341,7 +333,6 @@ body {
   cursor: pointer;
 }
 
-/* small responsive tweaks */
 @media (max-width: 520px) {
   .lf-header-inner,
   .lf-container {

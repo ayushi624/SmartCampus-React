@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar */
+
 aside.sidebar {
     position: sticky;
     top: 0;
@@ -136,7 +136,7 @@ aside.sidebar {
     cursor: pointer;
 }
 
-/* Header */
+
 header.topbar {
     position: sticky;
     top: 0;
@@ -193,7 +193,7 @@ header.topbar {
     border: 1px dashed rgba(43, 156, 146, 0.2);
 }
 
-/* Main container */
+
 .container {
     padding: 20px;
     max-width: 1200px;
@@ -202,7 +202,7 @@ header.topbar {
     gap: 18px;
 }
 
-/* Welcome */
+
 .welcome {
     background: linear-gradient(135deg, #2b9c92, #3bb4a6);
     padding: 24px;

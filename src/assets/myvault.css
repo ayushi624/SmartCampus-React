@@ -1,11 +1,8 @@
-/* --- MyVault Page (React Layout Safe Version) --- */
-
 .content {
   padding: 25px;
   width: 100%;
 }
 
-/* Page Title */
 .content h1 {
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -13,11 +10,7 @@
   color: #1e293b;
 }
 
-/* ============================
-   VAULT SUMMARY
-============================ */
 .stats {
-  /* background: linear-gradient(135deg, #0ea5e9, #2563eb); */
   border-radius: 16px;
   padding: 28px;
   margin-bottom: 35px;
@@ -56,9 +49,7 @@
   font-size: 0.9rem;
 }
 
-/* ============================
-   UPLOAD BOX
-============================ */
+
 .upload-box {
   background: #f8fafc;
   border: 2px dashed #94a3b8;
@@ -95,9 +86,7 @@
   background: #0ea5e9;
 }
 
-/* ============================
-   DOCUMENT GRID
-============================ */
+
 .documents h2 {
   margin-bottom: 16px;
   font-size: 1.3rem;
@@ -153,7 +142,7 @@
   max-width: 100% !important;
 }
 
-/* Vault Page Layout */
+
 .vault-summary-section {
   background: linear-gradient(135deg, #2b9c92, #3bb4a6);
   color: white;
@@ -173,7 +162,7 @@
   margin-bottom: 24px;
 }
 
-/* Row of stat cards */
+
 .vault-stats-row {
   display: flex;
   gap: 18px;
@@ -181,7 +170,7 @@
   flex-wrap: wrap;
 }
 
-/* Each card */
+
 .vault-stat-card {
   flex: 1;
   min-width: 180px;
